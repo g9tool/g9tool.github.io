@@ -1,144 +1,167 @@
-:root {
-  --bg-dark: #121212;
-  --text-dark: #fff;
-  --card-dark: #1f1f1f;
-  --input-dark: #2c2c2c;
-  --green: #28a745;
-  --blue: #007bff;
+/* G9Tool Updated CSS */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: var(--bg-dark);
-  color: var(--text-dark);
+  background-color: #121212;
+  color: #fff;
+  padding: 0;
+  margin: 0;
 }
 
-header {
+header.header {
+  background: #1e1e1e;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 20px;
-  background-color: var(--card-dark);
-  border-radius: 0 0 20px 20px;
+  padding: 12px 16px;
+  border-radius: 0 0 15px 15px;
+}
+
+.left-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
 }
 
 .logo {
-  font-size: 22px;
+  font-size: 18px;
+  font-weight: bold;
   display: flex;
-  gap: 8px;
+  align-items: center;
+  gap: 6px;
 }
 
 .telegram-icon {
-  font-size: 22px;
-  color: #1DA1F2;
-  background: #fff;
-  padding: 6px;
+  background: white;
+  color: #0088cc;
   border-radius: 50%;
+  padding: 6px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
 
 main {
-  display: flex;
-  justify-content: center;
   padding: 20px;
-  flex-wrap: wrap;
 }
 
 .form-wrapper {
-  width: 100%;
   max-width: 600px;
-  background: var(--card-dark);
+  margin: auto;
+  background: #1c1c1c;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
-input, textarea {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border-radius: 8px;
-  border: none;
-  background: var(--input-dark);
-  color: var(--text-dark);
-  box-sizing: border-box;
-}
-
+input,
 textarea {
-  min-height: 80px;
+  width: 100%;
+  background: #2a2a2a;
+  color: white;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  font-size: 16px;
 }
 
 button {
-  padding: 12px 20px;
-  margin-top: 10px;
   border: none;
-  border-radius: 8px;
+  padding: 12px 18px;
+  font-size: 16px;
   font-weight: bold;
+  border-radius: 8px;
   cursor: pointer;
+}
+
+button i {
+  margin-right: 6px;
 }
 
 #generateBtn {
-  background: var(--green);
+  background: #28a745;
   color: white;
+  margin-right: 10px;
 }
 
 #copyBtn {
-  background: var(--blue);
+  background: #007bff;
   color: white;
-  margin-left: 10px;
 }
 
-.output, .live-preview {
-  margin-top: 20px;
-  padding: 20px;
-  background: #1c1c1c;
-  border-radius: 10px;
-  overflow-x: auto;
-  white-space: pre-wrap;
+button:hover {
+  opacity: 0.9;
 }
 
-img {
-  max-width: 100%;
+#imageInputs {
+  margin-bottom: 15px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  width: 75%;
+  background: #1f1f1f;
+  padding: 60px 20px;
+  transition: 0.3s;
+  z-index: 999;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar a {
+  display: block;
+  background: #2a2a2a;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 10px;
+  padding: 12px;
   border-radius: 8px;
 }
 
-/* Thumbnail Responsive */
-#thumbs {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-#thumbs img {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  border-radius: 6px;
-  cursor: pointer;
-  border: 2px solid transparent;
+.sidebar a:hover {
+  background: #444;
 }
 
-/* Responsive */
-@media screen and (max-width: 480px) {
+.close-sidebar {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
   .form-wrapper {
     padding: 15px;
   }
 
-  input, textarea {
+  input,
+  textarea {
     font-size: 15px;
-  }
-
-  #thumbs img {
-    width: 48px;
-    height: 48px;
-  }
-
-  .telegram-icon {
-    font-size: 20px;
-    padding: 4px;
-  }
-
-  .logo {
-    font-size: 18px;
   }
 
   button {
@@ -146,7 +169,7 @@ img {
     margin-bottom: 10px;
   }
 
-  #copyBtn {
-    margin-left: 0;
+  #generateBtn {
+    margin-right: 0;
   }
 }
