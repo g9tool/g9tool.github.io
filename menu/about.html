@@ -1,18 +1,113 @@
-<!DOCTYPE html>
-<html lang="bn">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>এবাউট | G9Tool</title>
-  <link rel="stylesheet" href="../style.css">
-  <style>
-    body { animation: fadeIn 0.5s ease-in; padding: 40px 20px; color: #ddd; text-align: center; }
-    h1 { margin-bottom: 15px; }
-    p { line-height: 1.8; }
-  </style>
-</head>
-<body>
-  <h1><i class="fas fa-info-circle"></i> G9Tool সম্পর্কে</h1>
-  <p>G9Tool একটি প্রিমিয়াম টুল যা ই-কমার্স ব্যবসায়ীদের জন্য প্রোডাক্ট কোড, প্রিভিউ, অর্ডার বাটন জেনারেট করে।</p>
-</body>
-</html>
+<!-- FAQ Section -->
+<section id="faq" style="max-width:800px;margin:auto;padding:20px;">
+  <h2 style="text-align:center;margin-bottom:20px;">❓ G9 Tool – প্রায় জিজ্ঞাসিত প্রশ্নাবলি (FAQ)</h2>
+
+  <div class="faq-item">
+    <button class="faq-question">G9 Tool কী?</button>
+    <div class="faq-answer">
+      <p>G9 Tool একটি সহজ ও আধুনিক HTML জেনারেটর যা ব্যবসায়ীদের জন্য প্রোডাক্ট প্রেজেন্টেশন ও WhatsApp অর্ডার সিস্টেম সহজ করে তোলে।</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">এই টুলটি দিয়ে কী করা যায়?</button>
+    <div class="faq-answer">
+      <ul>
+        <li>✅ HTML কোড তৈরি</li>
+        <li>✅ ছবি ও অফার সহ প্রোডাক্ট প্রেজেন্টেশন</li>
+        <li>✅ WhatsApp অর্ডার লিংক</li>
+        <li>✅ ইউটিউব ভিডিও ইনবেড</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">কাস্টমার কিভাবে অর্ডার করবে?</button>
+    <div class="faq-answer">
+      <p>প্রোডাক্টের নিচে থাকা <strong>“WhatsApp অর্ডার”</strong> বাটনে ক্লিক করলে কাস্টমার আপনার WhatsApp-এ একটি রেডি করা মেসেজ পাঠাতে পারবে।</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">এই টুলটি কারা ব্যবহার করতে পারবে?</button>
+    <div class="faq-answer">
+      <p>G9 Tool ব্যবহার করতে পারবে:</p>
+      <ul>
+        <li>🍔 রেস্টুরেন্ট</li>
+        <li>👗 ফ্যাশন দোকান</li>
+        <li>📱 মোবাইল শপ</li>
+        <li>💄 কসমেটিকস</li>
+        <li>💊 ফার্মেসি</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">প্রোডাক্ট এড কিভাবে করব?</button>
+    <div class="faq-answer">
+      <p>আপনাকে একটি থিম এবং ভিডিও টিউটোরিয়াল দেওয়া হবে, যেখানে ধাপে ধাপে দেখানো থাকবে কিভাবে প্রোডাক্ট এড করতে হবে।</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Styles -->
+<style>
+  .faq-item {
+    background: #1c1c1c;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    border: 1px solid #333;
+  }
+
+  .faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    color: #fff;
+    text-align: left;
+    padding: 15px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .faq-question:hover {
+    background-color: #252525;
+  }
+
+  .faq-answer {
+    padding: 0 20px 15px;
+    display: none;
+    animation: fadeIn 0.3s ease-in-out;
+    color: #ddd;
+    font-size: 15px;
+  }
+
+  .faq-answer ul {
+    padding-left: 20px;
+    margin-top: 10px;
+  }
+
+  .faq-answer li {
+    list-style-type: "👉 ";
+    margin: 4px 0;
+  }
+
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+</style>
+
+<!-- FAQ Script -->
+<script>
+  document.querySelectorAll(".faq-question").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const answer = btn.nextElementSibling;
+      const isVisible = answer.style.display === "block";
+      document.querySelectorAll(".faq-answer").forEach(a => a.style.display = "none");
+      answer.style.display = isVisible ? "none" : "block";
+    });
+  });
+</script>
